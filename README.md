@@ -1,3 +1,3 @@
-OxideEssentials
+Oxide Essentials
 ===============
-OxideEssentials is a bundle of useful commands essential for any Rust server unning Oxide.
+Oxide Essentials is a bundle of useful commands essential for any Rust server inning Oxide.
