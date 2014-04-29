@@ -1,7 +1,6 @@
 -----------------------
 --- Oxide Essentials---
 -----------------------
------------------------
 
 -- Plugin Variables
 PLUGIN.Title = "OxideEssentials"
@@ -64,7 +63,28 @@ function PLUGIN:Init()
 --    self:AddChatCommand("version", self.cmdList)
 --    self:AddChatCommand("vote", self.cmdList)
 --    self:AddChatCommand("whitelist", self.cmdList)
-
+--    self:AddChatCommand("break", self.cmdList)
+--    self:AddChatCommand("fly", self.cmdList)
+--    self:AddChatCommand("speed", self.cmdList)
+--    self:AddChatCommand("workbench", self.cmdList)
+--    self:AddChatCommand("money", self.cmdList)
+--    self:AddChatCommand("buy", self.cmdList)
+--    self:AddChatCommand("sell", self.cmdList)
+--    self:AddChatCommand("pay", self.cmdList)
+--    self:AddChatCommand("price", self.cmdList)
+--    self:AddChatCommand("afk", self.cmdList)
+--    self:AddChatCommand("compass", self.cmdList)
+--    self:AddChatCommand("getpos", self.cmdList)
+--    self:AddChatCommand("ignore", self.cmdList)
+--    self:AddChatCommand("list", self.cmdList)
+--    self:AddChatCommand("mail", self.cmdList)
+--    self:AddChatCommand("motd", self.cmdList)
+--    self:AddChatCommand("msg", self.cmdList)
+--    self:AddChatCommand("seen", self.cmdList)
+--    self:AddChatCommand("suicide", self.cmdList)
+--    self:AddChatCommand("save", self.cmdList)
+--    self:AddChatCommand("backup", self.cmdList)
+--    self:AddChatCommand("broadcast", self.cmdList)
 
 end
 
