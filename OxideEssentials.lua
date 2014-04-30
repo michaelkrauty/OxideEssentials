@@ -13,84 +13,94 @@ PLUGIN.ResourceId    = "100"
 
 -- Called when oxide loads or user types oxide.reload example at F1 console
 function PLUGIN:Init()
---    self:AddChatCommand("test", self.cmdList)
---    self:AddChatCommand("picklock", self.cmdList)
---    self:AddChatCommand("airdrop", self.cmdList) <player name>
---    self:AddChatCommand("kick", self.cmdList) <player name> <player UID> [Reason]
---    self:AddChatCommand("ban", self.cmdList) <player name> <player UID> [Reason]
---    self:AddChatCommand("unban", self.cmdList) <player name> <player UID> [Reason]
---    self:AddChatCommand("clearinv", self.cmdList) <player name>
---    self:AddChatCommand("bancraft", self.cmdList) <player name>
---    self:AddChatCommand("unbancraft", self.cmdList) <player name>
---    self:AddChatCommand("daylengh", self.cmdList) [minutes]
---    self:AddChatCommand("nightlengh", self.cmdList) [minutes]
---    self:AddChatCommand("addwarp", self.cmdList) <warp name>
---    self:AddChatCommand("delwarp", self.cmdList) <warp name>
---    self:AddChatCommand("warp", self.cmdList) <warp name>
---    self:AddChatCommand("fall", self.cmdList) <on/off>
---    self:AddChatCommand("feed", self.cmdList) <player name>
---    self:AddChatCommand("freeze", self.cmdList) <player name>
---    self:AddChatCommand("give", self.cmdList) <player name> <item name> [amount]
---    self:AddChatCommand("giveall", self.cmdList) <item name> [amount]
---    self:AddChatCommand("god", self.cmdList) <player name>
---    self:AddChatCommand("heal", self.cmdList) <player name>
---    self:AddChatCommand("info", self.cmdList)
---    self:AddChatCommand("invsee", self.cmdList) <player name>
---    self:AddChatCommand("kill", self.cmdList) <player name>
---    self:AddChatCommand("kit", self.cmdList)
---    self:AddChatCommand("mute", self.cmdList)
---    self:AddChatCommand("players", self.cmdList)
---    self:AddChatCommand("admins", self.cmdList)
---    self:AddChatCommand("ping", self.cmdList)
---    self:AddChatCommand("pm", self.cmdList)
---    self:AddChatCommand("pos", self.cmdList)
---    self:AddChatCommand("r", self.cmdList)
---    self:AddChatCommand("remove", self.cmdList)
---    self:AddChatCommand("rules", self.cmdList)
---    self:AddChatCommand("say", self.cmdList)
---    self:AddChatCommand("share", self.cmdList)
---    self:AddChatCommand("stop", self.cmdList)
---    self:AddChatCommand("reload", self.cmdList)
---    self:AddChatCommand("time", self.cmdList)
---    self:AddChatCommand("tp", self.cmdList)
---    self:AddChatCommand("tpa", self.cmdList)
---    self:AddChatCommand("tpaccept", self.cmdList)
---    self:AddChatCommand("tpdeny", self.cmdList)
---    self:AddChatCommand("tphere", self.cmdList)
---    self:AddChatCommand("uammo", self.cmdList)
---    self:AddChatCommand("uid", self.cmdList)
---    self:AddChatCommand("vannish", self.cmdList)
---    self:AddChatCommand("version", self.cmdList)
---    self:AddChatCommand("vote", self.cmdList)
---    self:AddChatCommand("whitelist", self.cmdList)
---    self:AddChatCommand("break", self.cmdList)
---    self:AddChatCommand("fly", self.cmdList)
---    self:AddChatCommand("speed", self.cmdList)
---    self:AddChatCommand("workbench", self.cmdList)
---    self:AddChatCommand("money", self.cmdList)
---    self:AddChatCommand("buy", self.cmdList)
---    self:AddChatCommand("sell", self.cmdList)
---    self:AddChatCommand("pay", self.cmdList)
---    self:AddChatCommand("price", self.cmdList)
---    self:AddChatCommand("afk", self.cmdList)
---    self:AddChatCommand("compass", self.cmdList)
---    self:AddChatCommand("getpos", self.cmdList)
---    self:AddChatCommand("ignore", self.cmdList)
+    self:AddChatCommand("test", self.cmdTest)
+	self:AddChatCommand("dan", self.cmdDan)
+    self:AddChatCommand("mike", self.cmdMike)
+--    self:AddChatCommand("picklock", self.cmdPickLock)
+--    self:AddChatCommand("airdrop", self.cmdAirDrop) <player name>
+--    self:AddChatCommand("kick", self.cmdKick) <player name> <player UID> [Reason]
+--    self:AddChatCommand("ban", self.cmdBan) <player name> <player UID> [Reason]
+--    self:AddChatCommand("unban", self.cmdUnban) <player name> <player UID> [Reason]
+--    self:AddChatCommand("clearinv", self.cmdClearInv) <player name>
+--    self:AddChatCommand("bancraft", self.cmdBanCraft) <player name>
+--    self:AddChatCommand("unbancraft", self.cmdUnbanCraft) <player name>
+--    self:AddChatCommand("daylengh", self.cmdDayLengh) [minutes]
+--    self:AddChatCommand("nightlengh", self.cmdNightLengh) [minutes]
+--    self:AddChatCommand("addwarp", self.cmdAddWarp) <warp name>
+--    self:AddChatCommand("delwarp", self.cmdDelWarp) <warp name>
+--    self:AddChatCommand("warp", self.cmdWarp) <warp name>
+--    self:AddChatCommand("fall", self.cmdFall) <on/off>
+--    self:AddChatCommand("feed", self.cmdFeed) <player name>
+--    self:AddChatCommand("freeze", self.cmdFreeze) <player name>
+--    self:AddChatCommand("give", self.cmdGive) <player name> <item name> [amount]
+--    self:AddChatCommand("giveall", self.cmdGiveAll) <item name> [amount]
+--    self:AddChatCommand("god", self.cmdGod) <player name>
+--    self:AddChatCommand("heal", self.cmdHeal) <player name>
+--    self:AddChatCommand("info", self.cmdInfo)
+--    self:AddChatCommand("invsee", self.cmdInvSee) <player name>
+--    self:AddChatCommand("kill", self.cmdKill) <player name>
+--    self:AddChatCommand("kit", self.cmdKit)
+--    self:AddChatCommand("mute", self.cmdMute)
+--    self:AddChatCommand("players", self.cmdPlayers)
+--    self:AddChatCommand("admins", self.cmdAdmins)
+--    self:AddChatCommand("ping", self.cmdPing)
+--    self:AddChatCommand("pm", self.cmdPM)
+--    self:AddChatCommand("pos", self.cmdPOS)
+--    self:AddChatCommand("r", self.cmdR)
+--    self:AddChatCommand("remove", self.cmdRemove)
+--    self:AddChatCommand("rules", self.cmdRules)
+--    self:AddChatCommand("say", self.cmdSay)
+--    self:AddChatCommand("share", self.cmdShare)
+--    self:AddChatCommand("stop", self.cmdStop)
+--    self:AddChatCommand("reload", self.cmdReload)
+--    self:AddChatCommand("time", self.cmdTime)
+--    self:AddChatCommand("tp", self.cmdTP)
+--    self:AddChatCommand("tpa", self.cmdTPA)
+--    self:AddChatCommand("tpaccept", self.cmdTPAccept)
+--    self:AddChatCommand("tpdeny", self.cmdTPDeny)
+--    self:AddChatCommand("tphere", self.cmdTPHere)
+--    self:AddChatCommand("uammo", self.cmdUAmmo)
+--    self:AddChatCommand("uid", self.cmdUID)
+--    self:AddChatCommand("vannish", self.cmdVannish)
+--    self:AddChatCommand("version", self.cmdVersion)
+--    self:AddChatCommand("vote", self.cmdVote)
+--    self:AddChatCommand("whitelist", self.cmdWhiteList)
+--    self:AddChatCommand("break", self.cmdBreak)
+--    self:AddChatCommand("fly", self.cmdFly)
+--    self:AddChatCommand("speed", self.cmdSpeed)
+--    self:AddChatCommand("workbench", self.cmdWorkBench)
+--    self:AddChatCommand("money", self.cmdMoney)
+--    self:AddChatCommand("buy", self.cmdBuy)
+--    self:AddChatCommand("sell", self.cmdSell)
+--    self:AddChatCommand("pay", self.cmdPay)
+--    self:AddChatCommand("price", self.cmdPrice)
+--    self:AddChatCommand("afk", self.cmdAFK)
+--    self:AddChatCommand("compass", self.cmdCompass)
+--    self:AddChatCommand("getpos", self.cmdGetPOS)
+--    self:AddChatCommand("ignore", self.cmdIgnor)
 --    self:AddChatCommand("list", self.cmdList)
---    self:AddChatCommand("mail", self.cmdList)
---    self:AddChatCommand("motd", self.cmdList)
---    self:AddChatCommand("msg", self.cmdList)
---    self:AddChatCommand("seen", self.cmdList)
---    self:AddChatCommand("suicide", self.cmdList)
---    self:AddChatCommand("save", self.cmdList)
---    self:AddChatCommand("backup", self.cmdList)
---    self:AddChatCommand("broadcast", self.cmdList)
+--    self:AddChatCommand("mail", self.cmdMail)
+--    self:AddChatCommand("motd", self.cmdMOTD)
+--    self:AddChatCommand("msg", self.cmdMsg)
+--    self:AddChatCommand("seen", self.cmdSeen)
+--    self:AddChatCommand("suicide", self.cmdSuicide)
+--    self:AddChatCommand("save", self.cmdSave)
+--    self:AddChatCommand("backup", self.cmdBackup)
+--    self:AddChatCommand("broadcast", self.cmdBroadcast)
 
 end
 
 -- Called when user types /test
 function PLUGIN:cmdList( netuser, cmd, args )
-    rust.SendChatToUser( netuser, "Your plugin works!" )
+    rust.SendChatToUser( netuser, "Plugin works Command!" )
+end
+
+function PLUGIN:cmdDan( netuser, cmd, args )
+    rust.SendChatToUser( netuser, "Dan works Command!" )
+end
+
+function PLUGIN:cmdMike( netuser, cmd, args )
+    rust.SendChatToUser( netuser, "Mike works Command!" )
 end
 
 -- Automated Oxide help function (added to /help list)
