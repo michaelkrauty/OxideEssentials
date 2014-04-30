@@ -85,6 +85,7 @@ function PLUGIN:Init()
 --    self:AddChatCommand("save", self.cmdSave)
 --    self:AddChatCommand("backup", self.cmdBackup)
 --    self:AddChatCommand("broadcast", self.cmdBroadcast)
+--    self:AddChatCommand("accuracy", self.cmdAccuracy)
 end
 
 -- Called when user types /test
