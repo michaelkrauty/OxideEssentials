@@ -93,11 +93,11 @@ function PLUGIN:cmdList( netuser, cmd, args )
     rust.SendChatToUser( netuser, "Plugin works Command!" )
 end
 
-function PLUGIN:cmdPM( netuser, cmd, args )
+function PLUGIN:cmdPrivateMessage( netuser, cmd, args )
     rust.SendChatToUser( netuser, "Plugin works Command!" )
 end
 
-function PLUGIN:cmdR( netuser, cmd, args )
+function PLUGIN:cmdQuickReply( netuser, cmd, args )
     rust.SendChatToUser( netuser, "Plugin works Command!" )
 end
 
