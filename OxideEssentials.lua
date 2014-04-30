@@ -14,8 +14,6 @@ PLUGIN.ResourceId    = "100"
 -- Called when oxide loads or user types oxide.reload example at F1 console
 function PLUGIN:Init()
     self:AddChatCommand("test", self.cmdTest)
-	self:AddChatCommand("dan", self.cmdDan)
-    self:AddChatCommand("mike", self.cmdMike)
 --    self:AddChatCommand("picklock", self.cmdPickLock)
 --    self:AddChatCommand("airdrop", self.cmdAirDrop) <player name>
 --    self:AddChatCommand("kick", self.cmdKick) <player name> <player UID> [Reason]
@@ -44,9 +42,9 @@ function PLUGIN:Init()
 --    self:AddChatCommand("players", self.cmdPlayers)
 --    self:AddChatCommand("admins", self.cmdAdmins)
 --    self:AddChatCommand("ping", self.cmdPing)
---    self:AddChatCommand("pm", self.cmdPM)
+    self:AddChatCommand("pm", self.cmdPM)
 --    self:AddChatCommand("pos", self.cmdPOS)
---    self:AddChatCommand("r", self.cmdR)
+    self:AddChatCommand("r", self.cmdR)
 --    self:AddChatCommand("remove", self.cmdRemove)
 --    self:AddChatCommand("rules", self.cmdRules)
 --    self:AddChatCommand("say", self.cmdSay)
@@ -87,7 +85,6 @@ function PLUGIN:Init()
 --    self:AddChatCommand("save", self.cmdSave)
 --    self:AddChatCommand("backup", self.cmdBackup)
 --    self:AddChatCommand("broadcast", self.cmdBroadcast)
-
 end
 
 -- Called when user types /test
@@ -95,12 +92,12 @@ function PLUGIN:cmdList( netuser, cmd, args )
     rust.SendChatToUser( netuser, "Plugin works Command!" )
 end
 
-function PLUGIN:cmdDan( netuser, cmd, args )
-    rust.SendChatToUser( netuser, "Dan works Command!" )
+function PLUGIN:cmdPM( netuser, cmd, args )
+    rust.SendChatToUser( netuser, "Plugin works Command!" )
 end
 
-function PLUGIN:cmdMike( netuser, cmd, args )
-    rust.SendChatToUser( netuser, "Mike works Command!" )
+function PLUGIN:cmdR( netuser, cmd, args )
+    rust.SendChatToUser( netuser, "Plugin works Command!" )
 end
 
 -- Automated Oxide help function (added to /help list)
